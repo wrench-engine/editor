@@ -1,0 +1,3 @@
+[submodule "rendell-stuff"]
+	path = rendell-stuff
+	url = https://github.com/Soromytko/rendell-stuff.git
