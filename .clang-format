@@ -1,0 +1,35 @@
+BasedOnStyle: LLVM
+
+Language: Cpp
+Standard: Latest
+ColumnLimit: 100
+IndentWidth: 4
+TabWidth: 4
+AccessModifierOffset: -4
+ConstructorInitializerIndentWidth: 4
+
+UseTab: Never
+PointerAlignment: Right
+
+BreakBeforeBraces: Attach
+BreakConstructorInitializers: BeforeComma
+BreakBeforeTernaryOperators: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+
+BinPackArguments: false
+BinPackParameters: false
+MaxEmptyLinesToKeep: 1
+
+DerivePointerAlignment: false
+FixNamespaceComments: true
+SortIncludes: true
