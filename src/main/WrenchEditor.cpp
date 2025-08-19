@@ -6,11 +6,12 @@
 namespace wrench_editor {
 WrenchEditor::WrenchEditor(const Config &config)
     : _config(config) {
-    _mainWindow = rendell_ui::makeWindow(600, 400, "Wrench Editor");
+    _mainWindow = rendell_ui::makeWindow(800, 600, "Wrench Editor");
     if (!_mainWindow->isInitialized()) {
         EDITOR_CRITICAL("Failed to create main window");
         std::abort();
     }
+    //_mainWindow->setMinSize({800, 600});
     if (!rendell_ui::init()) {
         EDITOR_CRITICAL("Failed to initialize Rendell-UI");
         std::abort();
@@ -29,11 +30,10 @@ WrenchEditor::WrenchEditor(const Config &config)
     _mainWindow->setEventHandler(_canvas);
     _renderer = make_ref<Renderer>(_viewport);
 
-    _view = make_ref<WrenchEditorView>(_canvas);
+    _view = make_ref<WrenchEditorView>(_mainWindow, _canvas);
 }
 
 int WrenchEditor::run() {
-
     while (_mainWindow->isOpen()) {
         _frameRate.beginFrame();
 
