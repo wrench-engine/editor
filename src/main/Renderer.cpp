@@ -18,12 +18,12 @@ void Renderer::render() {
 
     _viewport->apply();
 
-    rendell::clear();
-    rendell::clearColor(0.0f, 0.0f, 0.0f, 1);
+    rendell::setClearBits(rendell::c::colorBufferBit | rendell::c::depthBufferBit);
+    rendell::setClearColor(0.0f, 0.0f, 0.0f, 1);
 
     rendell_ui::draw();
 
-    rendell::swapBuffers();
+    rendell::renderFrame();
 
     endRenderer();
 }

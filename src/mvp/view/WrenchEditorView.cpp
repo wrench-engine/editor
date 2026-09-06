@@ -23,7 +23,7 @@ createDockNodeBackgroundWidget(rendell_ui::WidgetSharedPtr parent, const glm::ve
 } // namespace wrench_editor
 
 namespace wrench_editor {
-WrenchEditorView::WrenchEditorView(rendell_ui::IWindowWeakPtr window,
+WrenchEditorView::WrenchEditorView(rendell_ui::IWindow *window,
                                    rendell_ui::DockCanvasSharedPtr canvas)
     : _canvas(canvas) {
     const rendell_ui::WidgetSharedPtr canvasRootWidget = canvas->getRootWidget();
